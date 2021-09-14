@@ -1,0 +1,9 @@
+name: "Checklist validator"
+author: "nordcloud"
+branding:
+  icon: "check-square"
+  color: "gray-dark"
+description: "Check if a pull requests task list is complete"
+runs:
+  using: "node12"
+  main: "index.js"
