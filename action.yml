@@ -6,4 +6,4 @@ branding:
 description: "Check if a pull requests task list is complete"
 runs:
   using: "node12"
-  main: "index.js"
+  main: "dist/index.js"

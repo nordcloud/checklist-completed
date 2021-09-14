@@ -3,7 +3,7 @@ const github = require("@actions/github");
 
 const checkOutstandingTasks = require("./check-outstanding-tasks");
 
-async function run() {
+function run() {
   try {
     // This should be a token with access to your repository scoped in as a secret.
     // The YML workflow will need to set myToken with the GitHub Secret Token
@@ -12,7 +12,7 @@ async function run() {
     const myToken = core.getInput("myToken");
 
     const payload = github.context.payload;
-    payload.pull_request
+    payload.pull_request;
 
     const octokit = github.getOctokit(myToken);
 
@@ -29,9 +29,8 @@ async function run() {
       core.setFailed(`Remaining checklist tasks: ${outstandingTasks.remaining}`);
     }
 
-    core.notice('Success')
     // send check back to GitHub
-    core.
+    core.notice("Success");
   } catch (error) {
     core.setFailed(error.message);
   }
