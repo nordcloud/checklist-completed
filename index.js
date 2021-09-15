@@ -11,7 +11,6 @@ function run() {
 
     if (outstandingTasks.remaining > 0) {
       core.setFailed(`Remaining checklist tasks: ${outstandingTasks.remaining}`);
-      return 1;
     }
 
     // send check back to GitHub
@@ -19,7 +18,6 @@ function run() {
     return 0;
   } catch (error) {
     core.setFailed(error.message);
-    return 1;
   }
 }
 
