@@ -9148,10 +9148,6 @@ const checkOutstandingTasks = __nccwpck_require__(3807);
 
 function run() {
   try {
-    const payload = github.context.payload;
-
-    const startTime = new Date().toISOString();
-
     const { pull_request } = github.context.payload;
 
     const outstandingTasks = checkOutstandingTasks(pull_request.body);
