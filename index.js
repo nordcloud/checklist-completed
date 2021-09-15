@@ -15,7 +15,6 @@ function run() {
 
     // send check back to GitHub
     core.notice("Success");
-    return 0;
   } catch (error) {
     core.setFailed(error.message);
   }
